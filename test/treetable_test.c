@@ -314,3 +314,17 @@ TEST_C(CC_TreeTableTestsWithDefaults, CC_TreeTableIterRemove)
     CHECK_EQUAL_C_INT(2, cc_treetable_size(table));
     CHECK_EQUAL_C_INT(0, cc_treetable_contains_key(table, &b));
 };
+
+TEST_C(CC_TreeTableTestsWithDefaults, CC_TreeTableIterEmpty)
+{
+    CC_TreeTableIter iter;
+    cc_treetable_iter_init(&iter, table);
+
+    CC_TreeTableEntry entry;
+    int loop_count = 0;
+    while (cc_treetable_iter_next(&iter, &entry) != CC_ITER_END) {
+        loop_count++;
+    }
+
+    CHECK_EQUAL_C_INT(0, loop_count);
+};

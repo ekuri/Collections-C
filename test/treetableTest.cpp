@@ -21,6 +21,7 @@ TEST_C_WRAPPER(CC_TreeTableTestsWithDefaults, CC_TreeTableGetGreaterThan);
 TEST_C_WRAPPER(CC_TreeTableTestsWithDefaults, CC_TreeTableGetLessThan);
 TEST_C_WRAPPER(CC_TreeTableTestsWithDefaults, CC_TreeTableIterNext);
 TEST_C_WRAPPER(CC_TreeTableTestsWithDefaults, CC_TreeTableIterRemove);
+TEST_C_WRAPPER(CC_TreeTableTestsWithDefaults, CC_TreeTableIterEmpty);
 
 int main(int argc, char **argv) {
     return RUN_ALL_TESTS(argc, argv);
